@@ -106,6 +106,9 @@ const renderer: Configuration = {
     app: path.resolve(__dirname, "src/web/index.tsx"),
   },
   externalsPresets: { node: true },
+  externals: {
+    "~/addon": "commonjs " + path.resolve(__dirname, "./build/Release/addon"),
+  },
   plugins: [
     // CSS を JS へバンドルせず別ファイルとして出力するプラグイン
     new MiniCssExtractPlugin(),

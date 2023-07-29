@@ -1,16 +1,13 @@
 {
   "name": "elctron-react-cpp",
   "version": "1.0.0",
-  "description": "",
   "main": "dist/main.js",
   "scripts": {
     "dev": "electron .",
     "dev:watch": "electronmon .",
-    "webpack:dev": "rm -rf dist && webpack --mode development --progress --watch"
+    "webpack:dev": "rm -rf dist && webpack --mode development --progress --watch",
+    "build:addons": "rm -rf build && node-gyp configure && node-gyp build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
     "react": "^18.2.0",
@@ -34,6 +31,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "node-addon-api": "^7.0.0",
     "prettier": "^3.0.0",
     "ts-loader": "^9.4.4",
     "ts-node": "^10.9.1",

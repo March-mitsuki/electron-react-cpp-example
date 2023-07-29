@@ -67,6 +67,9 @@ devDependencies:
   mini-css-extract-plugin:
     specifier: ^2.7.6
     version: 2.7.6(webpack@5.88.1)
+  node-addon-api:
+    specifier: ^7.0.0
+    version: 7.0.0
   prettier:
     specifier: ^3.0.0
     version: 3.0.0
@@ -2234,6 +2237,10 @@ packages:
     dependencies:
       lower-case: 2.0.2
       tslib: 2.6.1
+    dev: true
+
+  /node-addon-api@7.0.0:
+    resolution: {integrity: sha512-vgbBJTS4m5/KkE16t5Ly0WW9hz46swAstv0hYYwMtbG7AznRhNyfLRe8HZAiWIpcHzoO7HxhLuBQj9rJ/Ho0ZA==}
     dev: true
 
   /node-releases@2.0.13:

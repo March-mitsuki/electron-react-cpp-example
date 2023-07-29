@@ -10,10 +10,11 @@
     "noEmit": false,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "~/*": ["./build/Release/*"]
     }
   },
-  "typeRoots": ["node_modules/@types"],
-  "include": ["./src/**/*", "./webpack.config.ts"],
+  "typeRoots": ["node_modules/@types", "./interfaces"],
+  "include": ["./src/**/*", "./webpack.config.ts", "interfaces"],
   "exclude": ["**/node_modules/**"]
 }

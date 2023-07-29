@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import fs from "fs/promises";
+import addon from "~/addon";
 
 export default function Home() {
   const [count, setCount] = useState(0);
@@ -11,6 +12,10 @@ export default function Home() {
     const f = async () => {
       const file = await fs.readFile(process.cwd() + "/test.json", "utf-8");
       setFile(file);
+
+      // If success, it will print 8
+      const ans = addon.add(5, 3);
+      console.log(ans);
     };
 
     f().catch((err) => setFile(err.message));
