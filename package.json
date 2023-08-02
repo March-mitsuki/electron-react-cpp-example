@@ -6,7 +6,7 @@
     "dev": "electron .",
     "dev:watch": "electronmon .",
     "webpack:dev": "rm -rf dist && webpack --mode development --progress --watch",
-    "build:addons": "rm -rf build && node-gyp configure && node-gyp build"
+    "build:addons": "node-gyp rebuild"
   },
   "dependencies": {
     "dotenv": "^16.3.1",

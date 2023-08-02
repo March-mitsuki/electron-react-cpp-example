@@ -4,7 +4,7 @@
             "target_name": "addon",
             "cflags!": ["-fexceptions"],
             "cflags_cc!": ["-fexceptions"],
-            "sources": ["addons/*.cc"],
+            "sources": ["addons/hello.cc"],
             "include_dirs": [
                 "<!(node -p \"require('node-addon-api').include_dir\")",
                 #'<!@(pkg-config --cflags libpng | sed "s/-I//g")',
