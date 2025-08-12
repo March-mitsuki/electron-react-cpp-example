@@ -10,11 +10,15 @@
     "noEmit": false,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "~/*": ["./build/Release/*"]
+      "@/*": ["./src/*"]
     }
   },
   "typeRoots": ["node_modules/@types", "./interfaces"],
-  "include": ["./src/**/*", "./webpack.config.ts", "interfaces"],
+  "include": [
+    "src/**/*",
+    "tsup-config/**/*",
+    "interfaces/**/*",
+    "eslint.config.ts"
+  ],
   "exclude": ["**/node_modules/**"]
 }

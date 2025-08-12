@@ -7,15 +7,15 @@
             "sources": ["addons/hello.cc"],
             "include_dirs": [
                 "<!(node -p \"require('node-addon-api').include_dir\")",
-                #'<!@(pkg-config --cflags libpng | sed "s/-I//g")',
+                # "<!@(pkg-config --cflags libpng | sed 's/-I//g')",
             ],
             "defines": ["NAPI_CPP_EXCEPTIONS"],
             "libraries": [
-                #'<!@(pkg-config --libs libpng)'
+                # "<!@(pkg-config --libs libpng)"
             ],
             "conditions": [
                 [
-                    'OS=="mac"',
+                    "OS=='mac'",
                     {
                         "xcode_settings": {
                             "GCC_ENABLE_CPP_EXCEPTIONS": "YES",

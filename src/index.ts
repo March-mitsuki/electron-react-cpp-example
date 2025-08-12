@@ -1,8 +1,21 @@
-import { initElectronApp } from "./electron/init";
+/**
+ * ###########################
+ * #####    IMPORTANT    #####
+ * ###########################
+ *
+ * In the final package, you must include the following files and dirs:
+ * - dist/
+ * - package.json
+ * - node_modules/
+ *
+ * See scripts/build and tsup-config for more information.
+ */
+
+import { initElectronApp } from "./main";
 
 initElectronApp()
   .then(() => {
-    console.log("\x1b[32m" + "electron app ok" + "\x1b[0m");
+    console.log("[electron]", "electron app ok");
   })
   .catch((err) => {
     console.error("[electron]", "init err:", err);

@@ -17,15 +17,7 @@ pnpm i
 pnpm build:addons
 ```
 
-## 4. Compile ts to js
-```sh
-pnpm webpack:dev
-```
-
-## 5. Go
+## 4. Go
 ```sh
 pnpm dev
-
-# or
-pnpm dev:watch
 ```
